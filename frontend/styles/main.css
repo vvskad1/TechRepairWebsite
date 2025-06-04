@@ -1,0 +1,675 @@
+/* main.css - Modern, animated, aesthetic styles for FixIt Tech Solutions */
+
+:root {
+  --primary: #2e7dff;
+  --secondary: #00c6ae;
+  --accent: #f7b32b;
+  --bg: #f9fafe;
+  --text: #222;
+  --radius: 18px;
+  --shadow: 0 8px 32px rgba(46,125,255,0.08);
+  --transition: 0.4s cubic-bezier(.77,0,.18,1);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4vw;
+  background: #fff;
+  box-shadow: var(--shadow);
+  border-radius: 0 0 var(--radius) var(--radius);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  animation: fadeIn 1.2s;
+}
+.logo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 1px;
+}
+.navbar nav a {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: color var(--transition);
+}
+.navbar nav a:hover {
+  color: var(--primary);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5vw 8vw 2vw 8vw;
+  min-height: 60vh;
+  background: linear-gradient(120deg, #e3f0ff 0%, #f9fafe 100%);
+  border-radius: var(--radius);
+  margin: 2vw 0;
+  width: 100%;
+  max-width: none;
+  display: block;
+  padding-left: 0;
+  padding-right: 0;
+  box-shadow: none;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+.hero-content {
+  max-width: 600px;
+  margin-top: 2vw;
+  align-items: flex-start !important;
+  text-align: left !important;
+  margin-left: 4vw;
+}
+.hero h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  animation: slideIn 1.2s;
+}
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: #444;
+}
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+}
+.btn {
+  padding: 0.9rem 2.2rem;
+  border-radius: var(--radius);
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(46,125,255,0.08);
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: var(--secondary);
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
+}
+.btn-secondary {
+  background: #fff;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+.btn-secondary:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
+}
+.hero-illustration {
+  margin-left: 4vw;
+}
+.hero-illustration img {
+  width: 350px;
+  max-width: 40vw;
+  animation: bounceIn 1.5s;
+}
+
+.services-section, .booking-section, .chatbot-section {
+  margin: 4vw 2vw;
+  padding: 3vw 2vw;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  animation: fadeInUp 1.2s;
+  width: 100%;
+  max-width: none;
+  margin: 2vw 0;
+  display: block;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0;
+  box-shadow: none;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  background: #f1f5fa;
+  color: #888;
+  border-radius: var(--radius) var(--radius) 0 0;
+  margin: 4vw 2vw 0 2vw;
+  font-size: 1rem;
+  animation: fadeIn 1.2s;
+}
+
+/* Service Cards */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+}
+.service-card {
+  background: linear-gradient(120deg, #f9fafe 60%, #e3f0ff 100%);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  transition: transform 0.4s cubic-bezier(.77,0,.18,1), box-shadow 0.4s;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  animation: fadeInUp 1.2s forwards;
+}
+.service-card:hover {
+  transform: translateY(-8px) scale(1.03) rotate(-1deg);
+  box-shadow: 0 12px 32px rgba(46,125,255,0.13);
+}
+.service-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+.service-card p {
+  color: #444;
+  margin-bottom: 1.2rem;
+}
+.service-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  color: var(--secondary);
+}
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  letter-spacing: 1px;
+  animation: fadeIn 1.2s;
+}
+
+/* Chatbot floating action button */
+.chatbot-fab {
+  position: fixed;
+  right: 2.5vw;
+  bottom: 3vw;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  font-size: 2rem;
+  box-shadow: 0 4px 24px rgba(46,125,255,0.18);
+  cursor: pointer;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, transform 0.3s;
+}
+.chatbot-fab:hover {
+  background: var(--secondary);
+  transform: scale(1.08);
+}
+
+/* Chatbot modal */
+.chatbot-modal {
+  display: none;
+  position: fixed;
+  z-index: 300;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  background: rgba(46,125,255,0.10);
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.5s;
+}
+.chatbot-modal-content {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2.5rem 2rem 2rem 2rem;
+  width: 95vw;
+  max-width: 420px;
+  position: relative;
+  animation: bounceIn 0.7s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.chatbot-modal-content h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  color: #222;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+.chatbot-messages-modal {
+  min-height: 60px;
+  max-height: 180px;
+  overflow-y: auto;
+  margin-bottom: 1.2rem;
+  background: #f4f8ff;
+  border-radius: 18px;
+  padding: 1.1rem 1.2rem;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1.08rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.bot-msg, .user-msg {
+  display: inline-block;
+  margin-bottom: 0.7rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 16px;
+  font-size: 1.08rem;
+  max-width: 90%;
+  word-break: break-word;
+  animation: fadeIn 0.7s;
+}
+.bot-msg {
+  background: #e3f0ff;
+  color: var(--primary);
+  align-self: flex-start;
+}
+.user-msg {
+  background: var(--primary);
+  color: #fff;
+  align-self: flex-end;
+  margin-left: auto;
+}
+.chatbot-form-modal {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+.chatbot-form-modal input[type="text"] {
+  flex: 1 1 0;
+  padding: 0.9rem 1.1rem;
+  border-radius: 12px;
+  border: 1.5px solid #e3f0ff;
+  font-size: 1rem;
+  background: #fff;
+  transition: border 0.2s;
+  font-family: 'Roboto', Arial, sans-serif;
+  outline: none;
+}
+.chatbot-form-modal input[type="text"]:focus {
+  border: 1.5px solid var(--primary);
+}
+.chatbot-form-modal button {
+  padding: 0.9rem 2.2rem;
+  border-radius: var(--radius);
+  border: 2px solid var(--primary);
+  background: #fff;
+  color: var(--primary);
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+  box-shadow: 0 2px 12px rgba(46,125,255,0.08);
+}
+.chatbot-form-modal button:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
+}
+
+@media (max-width: 600px) {
+  .chatbot-modal-content {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    max-width: 98vw;
+  }
+  .chatbot-form-modal button {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+  }
+}
+
+/* Booking Section Enhancements */
+.booking-section {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin: 4vw 2vw;
+  padding: 3vw 2vw 2vw 2vw;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeInUp 1.2s;
+  width: 100%;
+  max-width: none;
+  margin: 2vw 0;
+  display: block;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0;
+  box-shadow: none;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+.booking-split {
+  display: flex;
+  flex-direction: row;
+  gap: 3vw;
+  width: 100%;
+  max-width: 900px;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2.5rem 2rem;
+  margin: 2vw auto;
+}
+.booking-left, .booking-right {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.booking-left {
+  border-right: 1.5px solid #e3f0ff;
+  padding-right: 2vw;
+}
+.booking-right {
+  padding-left: 2vw;
+  justify-content: center;
+}
+.booking-right ul {
+  margin-top: 0;
+  padding-left: 1.2em;
+}
+@media (max-width: 900px) {
+  .booking-split {
+    flex-direction: column;
+    padding: 1.2rem 0.5rem;
+    gap: 1.5rem;
+  }
+  .booking-left {
+    border-right: none;
+    padding-right: 0;
+    border-bottom: 1.5px solid #e3f0ff;
+    padding-bottom: 1.5rem;
+  }
+  .booking-right {
+    padding-left: 0;
+    padding-top: 1.5rem;
+  }
+}
+.booking-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+  justify-content: space-between;
+  background: #f9fafe;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 12px rgba(46,125,255,0.06);
+  padding: 2rem 1.5rem 1.2rem 1.5rem;
+  margin-bottom: 1.2rem;
+  width: 100%;
+  max-width: 100%;
+}
+.booking-form-left, .booking-form-right {
+  flex: 1 1 45%;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.booking-form-left {
+  margin-right: 1vw;
+}
+.booking-form-right {
+  margin-left: 1vw;
+}
+.booking-form input,
+.booking-form textarea {
+  padding: 0.9rem 1.1rem;
+  border-radius: 12px;
+  border: 1.5px solid #e3f0ff;
+  font-size: 1rem;
+  background: #fff;
+  transition: border 0.2s;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+.booking-form textarea {
+  min-height: 48px;
+  max-width: 100%;
+  resize: vertical;
+}
+.booking-form input:focus,
+.booking-form textarea:focus {
+  border: 1.5px solid var(--primary);
+  outline: none;
+}
+.booking-form .booking-form-submit {
+  flex: 1 1 100%;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 1rem 0;
+  border-radius: var(--radius);
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  box-shadow: 0 2px 12px rgba(46,125,255,0.08);
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  text-decoration: none;
+  width: 100%;
+  align-self: flex-end;
+}
+.booking-form .booking-form-submit:hover {
+  background: var(--secondary);
+  transform: translateY(-2px) scale(1.04);
+}
+@media (max-width: 700px) {
+  .booking-form {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .booking-form-left, .booking-form-right {
+    margin: 0;
+    min-width: 0;
+  }
+}
+.booking-success {
+  text-align: center;
+  color: var(--secondary);
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 1.2rem 0 0 0;
+  animation: fadeIn 1s;
+}
+
+/* Remove underline from all button headers and links inside buttons */
+.btn, .btn * {
+  text-decoration: none !important;
+}
+
+/* Layout container for all main sections */
+.main-content {
+  max-width: 1200px; /* Increased width for more spacious layout */
+  margin: 0 auto;
+  padding: 0 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Section base style for symmetry and centering */
+section {
+  width: 100%;
+  max-width: 1000px; /* Increased section width for more content area */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 3vw 0;
+}
+
+.section-title {
+  text-align: center;
+  width: 100%;
+}
+
+/* About section */
+.about-section {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2.5rem 2rem;
+  margin: 2vw auto;
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  /* Remove flex and center alignment */
+}
+.about-section ul {
+  text-align: left;
+  margin: 0 auto 2rem auto;
+  padding-left: 1.2em;
+  max-width: 500px;
+}
+.about-section img {
+  display: block;
+  margin: 0 auto 1.5rem auto;
+}
+.about-section > div[style*="display:flex"] {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 100%;
+}
+.about-section h3 {
+  text-align: left;
+}
+
+/* Contact section */
+.contact-section {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2.5rem 2rem;
+  margin: 2vw auto;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.contact-section form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.contact-section input,
+.contact-section textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.contact-section button {
+  width: 100%;
+}
+.contact-section .contact-success {
+  width: 100%;
+}
+.contact-section > div[style*="margin-top:2.5rem"] {
+  text-align: left;
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  .about-section, .contact-section {
+    padding: 1.2rem 0.5rem;
+    max-width: 98vw;
+  }
+  .hero, .services-section, .booking-section {
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+  }
+  .hero-content, .service-grid, .booking-form {
+    margin-left: 0;
+  }
+  .hero-illustration {
+    margin-left: 0;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideIn {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes fadeInUp {
+  from { transform: translateY(60px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes bounceIn {
+  0% { transform: scale(0.7); opacity: 0; }
+  60% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+.fade-in { animation: fadeIn 1.2s; }
+.slide-in { animation: slideIn 1.2s; }
+.fade-in-up { animation: fadeInUp 1.2s; }
+.bounce-in { animation: bounceIn 1.5s; }
+
+@media (max-width: 1200px) {
+  .main-content {
+    max-width: 98vw;
+  }
+  section, .about-section, .contact-section, .services-section, .booking-section, .hero {
+    max-width: 98vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+  }
+}
+@media (max-width: 900px) {
+  .main-content {
+    max-width: 100vw;
+    padding: 0 0.5vw;
+  }
+  section, .about-section, .contact-section, .services-section, .booking-section, .hero {
+    max-width: 100vw;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+  }
+}

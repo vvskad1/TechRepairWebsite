@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal | FixIt Tech Solutions</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script defer src="scripts/admin.js"></script>
+    <style>
+        .dashboard-stats-grid {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        .dashboard-card {
+            background: #f7faff;
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(46,125,255,0.07);
+            padding: 1.5rem 2rem;
+            min-width: 180px;
+            flex: 1 1 180px;
+            text-align: center;
+        }
+        .dashboard-card h3 {
+            margin: 0 0 0.5rem 0;
+            color: #2e7dff;
+            font-size: 1.1rem;
+        }
+        .dashboard-card .stat {
+            font-size: 2.1rem;
+            font-weight: 700;
+            color: #222;
+        }
+        .dashboard-charts {
+            margin: 2rem 0;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(46,125,255,0.07);
+            padding: 1.5rem 2rem;
+        }
+        .admin-bookings-filters {
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .admin-bookings-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(46,125,255,0.07);
+        }
+        .admin-bookings-table th, .admin-bookings-table td {
+            padding: 0.7rem 1rem;
+            border-bottom: 1px solid #e3f0ff;
+            text-align: left;
+        }
+        .admin-bookings-table th {
+            background: #f7faff;
+        }
+        .admin-bookings-table tr:last-child td {
+            border-bottom: none;
+        }
+        .quick-actions {
+            margin-bottom: 1.5rem;
+            display: flex;
+            gap: 1rem;
+        }
+        .quick-actions button {
+            background: #2e7dff;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 0.7rem 1.3rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .quick-actions button:hover {
+            background: #195bbf;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">🔧 FixIt Tech Admin</div>
+        <nav>
+            <a href="admin.html">Dashboard</a>
+            <a href="#bookings">Bookings</a>
+            <a href="#logout" id="logout-link">Logout</a>
+        </nav>
+    </header>
+    <main class="admin-main-content" style="max-width:1200px;margin:2rem auto;">
+        <section id="dashboard" class="admin-dashboard-section">
+            <h2>Dashboard</h2>
+            <div class="dashboard-stats-grid" id="dashboard-stats">
+                <!-- Stats cards will be loaded here -->
+            </div>
+            <div class="dashboard-charts">
+                <h3>Bookings Over Time</h3>
+                <canvas id="bookings-chart" height="80"></canvas>
+                <div style="color:#888;font-size:0.95rem;">(Chart coming soon)</div>
+                <div style="display:flex;gap:2rem;flex-wrap:wrap;margin-top:2rem;">
+                    <div style="flex:1;min-width:320px;">
+                        <h3>Repairs by Device Type</h3>
+                        <canvas id="device-chart" height="120"></canvas>
+                    </div>
+                    <div style="flex:1;min-width:320px;">
+                        <h3>Repairs by Issue Type</h3>
+                        <canvas id="issue-chart" height="120"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="quick-actions">
+                <button id="refresh-dashboard">🔄 Refresh Stats</button>
+                <button id="go-to-bookings">📋 View All Bookings</button>
+            </div>
+        </section>
+        <section id="bookings" class="admin-bookings-section">
+            <h2>Bookings</h2>
+            <div class="admin-bookings-filters">
+                <label>Status:
+                    <select id="filter-status">
+                        <option value="">All</option>
+                        <option value="pending">Pending</option>
+                        <option value="confirmed">Confirmed</option>
+                        <option value="completed">Completed</option>
+                        <option value="cancelled">Cancelled</option>
+                    </select>
+                </label>
+                <label>From: <input type="date" id="filter-from-date"></label>
+                <label>To: <input type="date" id="filter-to-date"></label>
+                <button id="filter-apply">Apply</button>
+            </div>
+            <table class="admin-bookings-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Device</th>
+                        <th>Issue</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="bookings-table-body">
+                    <!-- Bookings will be loaded here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

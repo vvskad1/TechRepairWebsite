@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FixIt Tech Solutions</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script defer src="scripts/main.js"></script>
+</head>
+<body>
+    <header class="navbar fade-in">
+        <div class="logo">🔧 FixIt Tech Solutions</div>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#booking">Book Now</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <div class="main-content">
+        <section class="hero slide-in">
+            <div class="hero-content">
+                <h1>Fast, Reliable Tech Repair</h1>
+                <p>Your devices, expertly fixed. Book, chat, and track—all in one place.</p>
+                <div class="cta-buttons">
+                    <a href="#booking" class="btn btn-primary">Book a Repair</a>
+                    <a href="#chatbot" class="btn btn-secondary">Ask the AI Assistant</a>
+                </div>
+            </div>
+            <div class="hero-illustration bounce-in">
+                <img src="/frontend/assets/hero-illustration.svg" alt="Tech Repair Illustration">
+            </div>
+        </section>
+        <section id="about" class="about-section fade-in-up">
+            <h2 class="section-title">About FixIt Tech Solutions</h2>
+            <p style="font-size:1.2rem; color:#444; margin-bottom:2rem;">FixIt Tech Solutions is your trusted partner for fast, reliable, and affordable device repairs. Our expert technicians are passionate about technology and dedicated to getting your devices back in top shape—quickly and hassle-free.</p>
+            <ul style="font-size:1.1rem; color:#333; margin-bottom:2rem;">
+                <li>✔️ Over 10 years of experience in tech repair</li>
+                <li>✔️ Certified and friendly technicians</li>
+                <li>✔️ Transparent pricing and honest advice</li>
+                <li>✔️ 1000+ happy customers served</li>
+                <li>✔️ We repair phones, laptops, tablets, and more</li>
+            </ul>
+            <div style="display:flex;align-items:center;gap:2rem;flex-wrap:wrap;">
+                <img src="assets/hero-illustration.svg" alt="Our Team" style="width:220px;max-width:40vw;">
+                <div style="flex:1;min-width:220px;">
+                    <h3 style="color:#2e7dff;margin-bottom:0.5rem;">Our Mission</h3>
+                    <p style="color:#444;">To make tech repair simple, accessible, and stress-free for everyone. We believe in honest service, clear communication, and using quality parts for every repair.</p>
+                </div>
+            </div>
+        </section>
+        <section id="services" class="services-section fade-in-up">
+            <h2 class="section-title">Our Services</h2>
+            <div class="service-grid">
+                <!-- Service cards will be dynamically loaded by JS for animation -->
+            </div>
+        </section>
+        <section id="booking" class="booking-section fade-in-up booking-split">
+            <div class="booking-left">
+                <h2 class="section-title">Book a Repair</h2>
+                <form class="booking-form fade-in-up">
+                    <div class="booking-form-left">
+                        <input type="text" placeholder="Name" required />
+                        <input type="email" placeholder="Email" required />
+                        <input type="tel" placeholder="Phone" required />
+                    </div>
+                    <div class="booking-form-right">
+                        <input type="text" placeholder="Device Type" required />
+                        <textarea placeholder="Describe the issue" required></textarea>
+                        <input type="datetime-local" required />
+                    </div>
+                    <button class="btn btn-primary booking-form-submit" type="submit">Submit Booking</button>
+                </form>
+                <div class="booking-success" style="display:none;">Thank you! We received your booking.</div>
+            </div>
+            <div class="booking-right">
+                <h3 style="color:#2e7dff;margin-bottom:1rem;">Why Book With Us?</h3>
+                <ul style="font-size:1.1rem; color:#333;">
+                    <li>✔️ Fast turnaround and expert repairs</li>
+                    <li>✔️ Transparent pricing, no hidden fees</li>
+                    <li>✔️ Friendly support and real-time updates</li>
+                    <li>✔️ Convenient online booking</li>
+                </ul>
+            </div>
+        </section>
+        <section id="contact" class="contact-section fade-in-up">
+            <h2 class="section-title">Contact Us</h2>
+            <p style="font-size:1.1rem; color:#444; margin-bottom:2rem;">Have a question, need help, or want to book a repair? Reach out to us and our team will get back to you as soon as possible.</p>
+            <form class="contact-form fade-in-up" style="display:flex;flex-direction:column;gap:1.2rem;max-width:400px;margin:0 auto;">
+                <input type="text" name="name" placeholder="Your Name" required style="padding:0.9rem 1.1rem;border-radius:12px;border:1.5px solid #e3f0ff;font-size:1rem;" />
+                <input type="email" name="email" placeholder="Your Email" required style="padding:0.9rem 1.1rem;border-radius:12px;border:1.5px solid #e3f0ff;font-size:1rem;" />
+                <textarea name="message" placeholder="Your Message" required style="min-height:64px;padding:0.9rem 1.1rem;border-radius:12px;border:1.5px solid #e3f0ff;font-size:1rem;"></textarea>
+                <button class="btn btn-primary" type="submit" style="margin-top:0.5rem;">Send Message</button>
+            </form>
+            <div class="contact-success" style="display:none;text-align:center;color:#00c6ae;font-size:1.1rem;font-weight:500;padding:1.2rem 0 0 0;">Thank you! We'll be in touch soon.</div>
+            <div style="margin-top:2.5rem;color:#555;font-size:1rem;text-align:center;">
+                <strong>Email:</strong> support@fixittech.com<br>
+                <strong>Phone:</strong> +1 (555) 123-4567<br>
+                <strong>Address:</strong> 123 Tech Lane, Innovation City, 12345
+            </div>
+        </section>
+    </div>
+    <button id="chatbot-fab" class="chatbot-fab bounce-in" aria-label="Open Chatbot">
+        <span>💬</span>
+    </button>
+    <div id="chatbot-modal" class="chatbot-modal">
+        <div class="chatbot-modal-content">
+            <span class="chatbot-modal-close">&times;</span>
+            <h2>AI Chatbot Assistant</h2>
+            <div class="chatbot-messages-modal">
+                <div class="bot-msg">Hi, how can I help you today?</div>
+            </div>
+            <form class="chatbot-form-modal">
+                <input type="text" placeholder="Type your message..." required />
+                <button class="btn btn-secondary" type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+    <footer class="footer fade-in">
+        <div>© 2025 FixIt Tech Solutions. All rights reserved.</div>
+    </footer>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.querySelector('.contact-form');
+        const success = document.querySelector('.contact-success');
+        if(form && success) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                form.style.display = 'none';
+                success.style.display = 'block';
+            });
+        }
+    });
+    </script>
+</body>
+</html>

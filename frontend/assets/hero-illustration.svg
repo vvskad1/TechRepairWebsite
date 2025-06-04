@@ -1,0 +1,11 @@
+<!-- Placeholder SVG illustration for hero section -->
+<svg width="350" height="220" viewBox="0 0 350 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="30" y="60" width="290" height="120" rx="24" fill="#e3f0ff"/>
+  <rect x="60" y="90" width="230" height="60" rx="16" fill="#2e7dff" fill-opacity="0.12"/>
+  <rect x="110" y="110" width="130" height="20" rx="8" fill="#2e7dff" fill-opacity="0.18"/>
+  <circle cx="175" cy="120" r="60" fill="#00c6ae" fill-opacity="0.12"/>
+  <rect x="150" y="80" width="50" height="60" rx="12" fill="#fff" stroke="#2e7dff" stroke-width="3"/>
+  <rect x="165" y="100" width="20" height="20" rx="5" fill="#2e7dff"/>
+  <rect x="170" y="120" width="10" height="15" rx="3" fill="#f7b32b"/>
+  <ellipse cx="175" cy="180" rx="60" ry="10" fill="#2e7dff" fill-opacity="0.08"/>
+</svg>

@@ -1,0 +1,20 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run FastAPI server",
+            "type": "shell",
+            "command": "uvicorn main:app --reload",
+            "group": "build",
+            "problemMatcher": [],
+            "isBackground": true
+        },
+        {
+            "label": "Initialize Database",
+            "type": "shell",
+            "command": "python -c \"from db import Base, engine; Base.metadata.create_all(bind=engine)\"",
+            "group": "build",
+            "problemMatcher": []
+        }
+    ]
+}
