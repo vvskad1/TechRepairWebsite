@@ -8,12 +8,9 @@ load_dotenv()
 app = FastAPI(title="FixIt Tech Solutions Backend")
 
 # CORS setup
-origins = [
-    os.getenv("FRONTEND_ORIGIN", "*")
-]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["*"],  # Allow all origins for local development
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

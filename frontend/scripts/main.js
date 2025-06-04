@@ -107,12 +107,11 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             const data = await resp.json();
             botTyping.remove();
-
             if (data.conversation_id) chatbotConversationId = data.conversation_id;
-
             const botMsg = document.createElement('div');
             botMsg.className = 'bot-msg';
-            botMsg.textContent = data.response || 'Sorry, I couldn\'t understand that.';
+            // Use backend's .response field, fallback to .message, fallback to LLM content, fallback to error
+            botMsg.textContent = data.response || data.message || data.choices?.[0]?.message?.content || 'Sorry, I couldn\'t understand that.';
             messagesContainer.appendChild(botMsg);
             messagesContainer.scrollTop = messagesContainer.scrollHeight;
         } catch (err) {
@@ -204,7 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = await resp.json();
         const botMsg = document.createElement('div');
         botMsg.className = 'bot-msg';
-        botMsg.textContent = data.choices?.[0]?.message?.content || 'Sorry, I couldn\'t understand that.';
+        botMsg.textContent = data.response || data.message || data.choices?.[0]?.message?.content || 'Sorry, I couldn\'t understand that.';
         messages.appendChild(botMsg);
         messages.scrollTop = messages.scrollHeight;
     } catch (err) {

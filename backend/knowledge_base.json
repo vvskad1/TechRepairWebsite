@@ -1,0 +1,97 @@
+[
+  {
+    "id": 1,
+    "title": "Screen Replacement",
+    "content": "We offer fast and reliable screen replacement for phones, laptops, and tablets. Most repairs are completed within 1-2 hours."
+  },
+  {
+    "id": 2,
+    "title": "Battery Replacement",
+    "content": "If your device battery drains quickly or won’t charge, we can replace it with a high-quality new battery."
+  },
+  {
+    "id": 3,
+    "title": "Water Damage Repair",
+    "content": "We can recover and repair devices affected by water or other liquids. Bring your device in as soon as possible for the best results."
+  },
+  {
+    "id": 4,
+    "title": "Data Recovery",
+    "content": "Lost files? We can help recover your data from phones, laptops, and tablets."
+  },
+  {
+    "id": 5,
+    "title": "Booking Process",
+    "content": "You can book a repair online, by phone, or by visiting our store. We’ll confirm your appointment and keep you updated. Use our website's booking form for a fast response."
+  },
+  {
+    "id": 6,
+    "title": "Contact Information",
+    "content": "You can reach us at support@fixittech.com or +1 (555) 123-4567. Our address is 123 Tech Lane, Innovation City, 12345."
+  },
+  {
+    "id": 7,
+    "title": "About FixIt Tech Solutions",
+    "content": "FixIt Tech Solutions is your trusted partner for fast, reliable, and affordable device repairs. Our expert technicians are passionate about technology and dedicated to getting your devices back in top shape—quickly and hassle-free. Over 10 years of experience, certified and friendly technicians, transparent pricing, and 1000+ happy customers served."
+  },
+  {
+    "id": 8,
+    "title": "Our Mission",
+    "content": "To make tech repair simple, accessible, and stress-free for everyone. We believe in honest service, clear communication, and using quality parts for every repair."
+  },
+  {
+    "id": 9,
+    "title": "Why Book With Us?",
+    "content": "Fast turnaround and expert repairs, transparent pricing with no hidden fees, friendly support and real-time updates, and convenient online booking."
+  },
+  {
+    "id": 10,
+    "title": "Supported Devices",
+    "content": "We repair phones, laptops, tablets, and other electronics."
+  },
+  {
+    "id": 11,
+    "title": "Company Values",
+    "content": "Honest service, clear communication, quality parts, and customer satisfaction are at the heart of everything we do."
+  },
+  {
+    "id": 12,
+    "title": "How to Contact Us",
+    "content": "Have a question, need help, or want to book a repair? Reach out to us and our team will get back to you as soon as possible. Use the contact form on our website or email support@fixittech.com."
+  },
+  {
+    "id": 13,
+    "title": "FAQ: How long does a repair take?",
+    "content": "Most screen replacements are completed within 1-2 hours. Battery replacements take 30-60 minutes. Water damage and data recovery may take longer depending on the issue."
+  },
+  {
+    "id": 14,
+    "title": "FAQ: What are your business hours?",
+    "content": "We are open Monday to Saturday, 9am to 7pm. You can book online 24/7."
+  },
+  {
+    "id": 15,
+    "title": "FAQ: What payment methods do you accept?",
+    "content": "We accept cash, credit/debit cards, and UPI payments."
+  },
+  {
+    "id": 16,
+    "title": "FAQ: Do you offer a warranty?",
+    "content": "Yes, we offer a 90-day warranty on all repairs and parts."
+  },
+  {
+    "id": 17,
+    "title": "FAQ: Can I track my repair?",
+    "content": "Yes, you can track your repair status online using your booking ID or contact our support team."
+  },
+  {
+    "id": 18,
+    "title": "Company Contact Details",
+    "content": "Email: support@fixittech.com | Phone: +1 (555) 123-4567 | Address: 123 Tech Lane, Innovation City, 12345."
+  },
+  {
+    "id": 19,
+    "title": "Customer Promise",
+    "content": "We promise fast service, quality parts, friendly support, and honest advice for every customer."
+  }
+]

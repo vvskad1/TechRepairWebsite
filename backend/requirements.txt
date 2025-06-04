@@ -6,3 +6,5 @@ pydantic[email]
 aiosqlite
 email-validator
 httpx
+sentence-transformers
+numpy
